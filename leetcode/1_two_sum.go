@@ -5,17 +5,17 @@
 package main
 
 func twoSum(nums []int, target int) []int {
-	m, l := make(map[int]int), len(nums)
-	for i:=0;i < l;i++ {
-		m[nums[i]] = i
-	}
-	for i:=0;i < l;i++ {
-		o := target - nums[i]
-		if _, b := m[o];b && i!=m[o]{
-			return []int{i, m[o]}
-		}
-	}
-	return []int{-1, -1}
+    m, l := make(map[int]int), len(nums)
+    for i:=0;i < l;i++ {
+        m[nums[i]] = i
+    }
+    for i:=0;i < l;i++ {
+        o := target - nums[i]
+        if _, b := m[o];b && i!=m[o]{
+            return []int{i, m[o]}
+        }
+    }
+    return []int{-1, -1}
 }
 func main(){
 	twoSum([]int, 1)
