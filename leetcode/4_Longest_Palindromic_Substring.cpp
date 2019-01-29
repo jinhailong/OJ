@@ -12,3 +12,6 @@ string longestPalindrome(string s) {
     }
     return s.substr(min_start, max_len);
 }
+
+//总体思路
+//确定回文用基于当前字符的扩展方式，可进一步节省时间复杂度；
